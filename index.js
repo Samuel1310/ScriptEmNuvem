@@ -2,7 +2,7 @@ import express from 'express';
 import { MercadoPagoConfig, Preference } from 'mercadopago';
 
 const app = express();
-const port = 3000; // Ou outra porta de sua escolha
+const port = process.env.PORT || 3000; // Use a porta definida pela Railway
 
 // Configurar o Mercado Pago
 const client = new MercadoPagoConfig({ accessToken: 'TEST-3558795084321893-081615-18c02cd9180cdb899845724bb63ebb92-322855810' });
